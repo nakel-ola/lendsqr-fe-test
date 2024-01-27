@@ -1,22 +1,28 @@
 @import "../../styles/variables";
 
 .container {
-  height: 100px;
+  height: 70px;
   background: #fff;
   box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 0px 15px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .logo {
-  height: 30px;
+  height: 25px;
   width: 144.804px;
 }
 
 .searchbar {
-  display: flex;
+  display: none;
   align-items: center;
   border-radius: 8px;
   border: 1px solid rgba(33, 63, 125, 0.2);
@@ -52,10 +58,11 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 47px;
+  gap: 23px;
 }
 
 .doc_link {
+  display: none;
   text-decoration: underline;
   color: #213f7d;
   font-size: 16px;
@@ -75,6 +82,7 @@
   gap: 10px;
 
   p {
+    display: none;
     color: #213f7d;
     font-size: 16px;
     font-weight: 500;
@@ -87,8 +95,49 @@
 }
 
 .user_card_image {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   overflow: hidden;
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 100px;
+    padding: 0px 30px;
+  }
+  .mobile_container {
+    display: none;
+  }
+
+  .left_hamburger {
+    display: none;
+  }
+
+  .logo {
+    height: 30px;
+    width: 144.804px;
+  }
+
+  .searchbar {
+    display: flex;
+  }
+
+  .right {
+    gap: 47px;
+  }
+  .doc_link {
+    display: block;
+  }
+
+  .user_card {
+    p {
+      display: block;
+    }
+  }
+
+  .user_card_image {
+    width: 48px;
+    height: 48px;
+  }
 }

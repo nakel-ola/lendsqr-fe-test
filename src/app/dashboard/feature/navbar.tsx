@@ -5,9 +5,12 @@ import styles from "./navbar.module.scss";
 import Image from "next/image";
 import { DropdownIcon, Notification, Search } from "@/components/icons";
 import { FormEvent } from "react";
-
+import { Hamburger } from "@/components/hamburger";
+import { useSidebarStore } from "../store/sidebar-store";
 
 export const Navbar = () => {
+  const { setIsOpen, isOpen } = useSidebarStore();
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -15,15 +18,24 @@ export const Navbar = () => {
     <div className={styles.container}>
       {/* logo */}
 
-      <Link href="/">
-        <Image
-          src="/logo.svg"
-          alt=""
-          className={styles.logo}
-          width={100}
-          height={70}
+      <div className={styles.left}>
+        <Hamburger
+          className={styles.left_hamburger}
+          onToggle={setIsOpen}
+          toggled={isOpen}
+          direction="right"
+          size={20}
         />
-      </Link>
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt=""
+            className={styles.logo}
+            width={100}
+            height={70}
+          />
+        </Link>
+      </div>
 
       {/* search bar */}
 
