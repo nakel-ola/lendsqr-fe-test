@@ -14,7 +14,7 @@ export { default as Home } from "./Home";
 export { default as IcMoreVert } from "./IcMoreVert";
 export { default as Loan } from "./Loan";
 export { default as Notification } from "./Notification";
-export { default as NpNext } from "./NpNext";
+export { default as ChevronDown } from "./ChevronDown";
 export { default as PiggyBank } from "./PiggyBank";
 export { default as Sack } from "./Sack";
 export { default as Scroll } from "./Scroll";

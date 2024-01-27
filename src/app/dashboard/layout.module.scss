@@ -5,30 +5,18 @@
 }
 
 .wrapper {
-  display: grid;
-  height: calc(100vh - 57.4px);
+  display: flex;
+  height: calc(100vh - 100px);
   overflow: hidden;
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.sidebar {
-  display: none;
-  overflow-y: scroll;
-  grid-column: span 2 / span 2;
-  height: 100%;
 }
 
 .body {
   overflow-y: auto;
-  grid-column: span 10 / span 10;
+  width: calc(100% - 283px);
   height: 100%;
 }
 
 @media (min-width: 768px) {
-  .sidebar {
-    display: block;
-  }
-
   .body {
     grid-column: span 8 / span 8;
   }

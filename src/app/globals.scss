@@ -1,11 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "./styles/variables";
 
 * {
   padding: 0px;
   margin: 0px;
   font-family: var(--font-avenir);
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: color(primary);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+*::-ms-scrollbar {
+  width: 5px;
+  height: 5px;
 }

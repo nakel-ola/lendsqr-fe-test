@@ -1,7 +1,7 @@
 import styles from "./layout.module.scss";
 
 import React, { PropsWithChildren } from "react";
-import { Navbar } from "./feature";
+import { Navbar, Sidebar } from "./feature";
 
 export default function DashboardLayout({ children }: PropsWithChildren) {
   return (
@@ -9,7 +9,8 @@ export default function DashboardLayout({ children }: PropsWithChildren) {
       <Navbar />
 
       <div className={styles.wrapper}>
-        <div className={styles.sidebar}></div>
+        <Sidebar />
+
         <div className={styles.body}>{children}</div>
       </div>
     </div>
