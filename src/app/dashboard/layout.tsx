@@ -5,7 +5,7 @@ import { Navbar, Sidebar } from "./feature";
 
 export default function DashboardLayout({ children }: PropsWithChildren) {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Navbar />
 
       <div className={styles.wrapper}>
@@ -13,6 +13,6 @@ export default function DashboardLayout({ children }: PropsWithChildren) {
 
         <div className={styles.body}>{children}</div>
       </div>
-    </div>
+    </main>
   );
 }

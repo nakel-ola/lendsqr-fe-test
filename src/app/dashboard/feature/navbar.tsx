@@ -15,7 +15,7 @@ export const Navbar = () => {
     e.preventDefault();
   };
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       {/* logo */}
 
       <div className={styles.left}>
@@ -74,6 +74,6 @@ export const Navbar = () => {
           <DropdownIcon />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
