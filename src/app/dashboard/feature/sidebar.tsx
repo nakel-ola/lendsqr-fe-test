@@ -9,6 +9,8 @@ import { useWindowSize } from "@/hooks/use-window-size";
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSidebarStore } from "../store/sidebar-store";
+import Image from "next/image";
+import Link from "next/link";
 
 export const Sidebar = () => {
   return (
@@ -56,6 +58,15 @@ const MobileWrapper = () => {
             animate={{ marginLeft: "0%" }}
             exit={{ marginLeft: "-70%" }}
           >
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt=""
+                className={styles.logo}
+                width={100}
+                height={70}
+              />
+            </Link>
             <Content />
           </motion.div>
         </motion.div>
