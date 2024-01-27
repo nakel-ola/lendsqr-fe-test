@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import styles from "./page.module.scss";
-import { StatsSection } from "./feature";
+import { StatsSection, UsersSection } from "./feature";
 
 export default function Dashboard() {
   return (
@@ -8,6 +8,8 @@ export default function Dashboard() {
       <h1 className={styles.heading_text}>Users</h1>
 
       <StatsSection />
+
+      <UsersSection />
     </Fragment>
   );
 }
