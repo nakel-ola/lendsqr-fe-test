@@ -1,0 +1,94 @@
+@import "../../styles/variables";
+
+.container {
+  height: 100px;
+  background: #fff;
+  box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+
+.logo {
+  height: 30px;
+  width: 144.804px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 63, 125, 0.2);
+  background: #fff;
+  width: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  input {
+    margin: 12px 0px 12px 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    ::placeholder {
+      color: #545f7d;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  button {
+    width: 56px;
+    height: 40px;
+    flex-shrink: 0;
+    background-color: #39cdcc;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 47px;
+}
+
+.doc_link {
+  text-decoration: underline;
+  color: #213f7d;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.bell_icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.user_card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    color: #213f7d;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}
+
+.user_card_image {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+}

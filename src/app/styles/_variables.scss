@@ -1,0 +1,15 @@
+$colors: (
+  primary: #39cdcc,
+  secondary: #213f7d,
+  white: #ffffff,
+  black: #000000,
+);
+
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function font($font-name) {
+  @return map-get($font, $font-name);
+}

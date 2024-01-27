@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./styles/variables";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--font-avenir);
+}
