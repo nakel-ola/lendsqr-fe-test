@@ -29,3 +29,7 @@ export { default as UserTimes } from "./UserTimes";
 export { default as User } from "./User";
 export { default as Users } from "./Users";
 export { default as DropdownIcon } from "./DropdownIcon";
+export { default as LoanOrangeIcon } from "./LoanOrange";
+export { default as MoneyFuchsiaIcon } from "./MoneyFuchsia";
+export { default as UserPurpleIcon } from "./UserPurple";
+export { default as UsersPinkIcon } from "./UsersPink";

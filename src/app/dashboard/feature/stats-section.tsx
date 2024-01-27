@@ -1,31 +1,36 @@
 import { SVGProps } from "react";
 import styles from "./stats-section.module.scss";
-import { Users } from "@/components/icons";
+import {
+  LoanOrangeIcon,
+  MoneyFuchsiaIcon,
+  UserPurpleIcon,
+  UsersPinkIcon,
+} from "@/components/icons";
 
 type Props = {};
 export const StatsSection = (props: Props) => {
   return (
     <div className={styles.container}>
       <Card
-        Icon={Users}
+        Icon={UsersPinkIcon}
         title="Users"
         value="2,453"
         iconClassName={styles.stats_card_pink_icon}
       />
       <Card
-        Icon={Users}
+        Icon={UserPurpleIcon}
         title="Active Users"
         value="2,453"
         iconClassName={styles.stats_card_purple_icon}
       />
       <Card
-        Icon={Users}
+        Icon={LoanOrangeIcon}
         title="Users with Loans"
         value="12,453"
         iconClassName={styles.stats_card_orange_icon}
       />
       <Card
-        Icon={Users}
+        Icon={MoneyFuchsiaIcon}
         title="Users with Savings"
         value="102,453"
         iconClassName={styles.stats_card_red_icon}
