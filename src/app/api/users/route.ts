@@ -1,14 +1,6 @@
-import users from "@/data/users.json";
 import { removeDuplicates } from "@/utils/remove-duplicates";
-import {
-  getUsersByEmail,
-  getUsersByJoinedDate,
-  getUsersByOrganization,
-  getUsersByPhoneNumber,
-  getUsersByStatus,
-  getUsersByUsername,
-  getUsersWithPagination,
-} from "@/utils/users";
+import { User, getUsersWithPagination } from "@/utils/users";
+import users from "@/data/users.json";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -22,26 +14,17 @@ export async function GET(request: Request) {
   const page = searchParams.get("page") ?? 1;
   const pageSize = searchParams.get("pageSize") ?? 10;
 
-  let filteredUsers = users;
-
-  if (organization) {
-    filteredUsers = [...users, ...getUsersByOrganization(users, organization)];
-  }
-  if (email) {
-    filteredUsers = [...users, ...getUsersByEmail(users, email)];
-  }
-  if (username) {
-    filteredUsers = [...users, ...getUsersByUsername(users, username)];
-  }
-  if (phone_number) {
-    filteredUsers = [...users, ...getUsersByPhoneNumber(users, phone_number)];
-  }
-  if (status) {
-    filteredUsers = [...users, ...getUsersByStatus(users, status)];
-  }
-  if (joined_at) {
-    filteredUsers = [...users, ...getUsersByJoinedDate(users, joined_at)];
-  }
+  let filteredUsers: User[] = users.filter((user) => {
+    return (
+      (!organization || user.organization.includes(organization)) &&
+      (!username || user.username.includes(username)) &&
+      (!email || user.email.includes(email)) &&
+      (!phone_number || user.phone_number.includes(phone_number)) &&
+      (!status || user.status === status) &&
+      (!joined_at ||
+        new Date(user.joined_at).getTime() === new Date(joined_at).getTime())
+    );
+  });
 
   const newUsers = removeDuplicates(filteredUsers, "id");
 
@@ -50,3 +33,4 @@ export async function GET(request: Request) {
     results: getUsersWithPagination(newUsers, Number(page), Number(pageSize)),
   });
 }
+
