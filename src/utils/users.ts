@@ -4,7 +4,7 @@ export type User = {
   username: string;
   email: string;
   phone_number: string;
-  status: string;
+  status: "inactive" | "active" | "blacklisted" | "pending";
   joined_at: string;
 };
 

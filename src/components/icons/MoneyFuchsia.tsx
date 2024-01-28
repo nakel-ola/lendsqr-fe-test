@@ -9,7 +9,7 @@ const SvgMoneyFuchsia = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g id="np_money_549109_000000 1" clip-path="url(#clip0_5530_2585)">
+    <g id="np_money_549109_000000 1" clipPath="url(#clip0_5530_2585)">
       <g id="Group">
         <path
           id="Vector"

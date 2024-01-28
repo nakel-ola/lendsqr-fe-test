@@ -9,7 +9,7 @@ const SvgUsersPink = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g id="np_users_1248631_000000 1" clip-path="url(#clip0_5530_2371)">
+    <g id="np_users_1248631_000000 1" clipPath="url(#clip0_5530_2371)">
       <g id="Group">
         <path
           id="Vector"
