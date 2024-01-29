@@ -1,14 +1,47 @@
 "use server";
 
+import { addSearchParamsToUrl } from "@/utils/add-search-params-to-url";
 import { User } from "@/utils/users";
 
 type ReturnType = {
   totalItems: number;
   results: User[];
 };
-export async function getUsers(): Promise<ReturnType> {
+
+type Args = {
+  page: string;
+  pageSize: string;
+  organization: string;
+  email: string;
+  username: string;
+  phone_number: string;
+  status: string;
+  joined_at: string;
+};
+export async function getUsers(args: Args): Promise<ReturnType> {
   try {
-    const res = await fetch(`${process.env.BASE_URL}/api/users`, {
+    const {
+      page,
+      pageSize,
+      email,
+      joined_at,
+      organization,
+      phone_number,
+      status,
+      username,
+    } = args;
+
+    const url = addSearchParamsToUrl(`${process.env.BASE_URL}/api/users`, {
+      page,
+      pageSize,
+      email,
+      joined_at,
+      organization,
+      phone_number,
+      status,
+      username,
+    });
+    const res = await fetch(url, {
       method: "GET",
     });
 

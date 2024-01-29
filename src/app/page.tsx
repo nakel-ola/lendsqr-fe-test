@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import { Input } from "@/components/input";
+import { Input } from "@/components/input/input";
 import { useState } from "react";
 
 export default function Home() {

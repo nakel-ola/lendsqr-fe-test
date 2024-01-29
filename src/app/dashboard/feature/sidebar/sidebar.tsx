@@ -4,11 +4,11 @@ import { Briefcase, ChevronDown } from "@/components/icons";
 import styles from "./sidebar.module.scss";
 import { usePathname, useRouter } from "next/navigation";
 import { Fragment, SVGProps, useEffect, useRef } from "react";
-import { navigation } from "../data/navigation";
+import { navigation } from "../../data/navigation";
 import { useWindowSize } from "@/hooks/use-window-size";
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 import { AnimatePresence, motion } from "framer-motion";
-import { useSidebarStore } from "../store/sidebar-store";
+import { useSidebarStore } from "../../store/sidebar-store";
 import Image from "next/image";
 import Link from "next/link";
 

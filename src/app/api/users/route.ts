@@ -14,7 +14,7 @@ export async function GET(request: Request) {
   const page = searchParams.get("page") ?? 1;
   const pageSize = searchParams.get("pageSize") ?? 10;
 
-  let filteredUsers: User[] = users.filter((user) => {
+  let filteredUsers: User[] = (users as User[]).filter((user) => {
     return (
       (!organization || user.organization.includes(organization)) &&
       (!username || user.username.includes(username)) &&
@@ -33,4 +33,3 @@ export async function GET(request: Request) {
     results: getUsersWithPagination(newUsers, Number(page), Number(pageSize)),
   });
 }
-

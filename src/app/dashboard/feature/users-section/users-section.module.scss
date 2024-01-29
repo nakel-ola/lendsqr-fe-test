@@ -22,10 +22,12 @@
     font-weight: 600;
     text-transform: uppercase;
     white-space: nowrap !important;
+    padding-right: 35px !important;
     div {
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-shrink: 0;
     }
   }
 }
@@ -44,9 +46,13 @@
   td {
     padding-top: 21px !important;
     padding-bottom: 23px !important;
-    margin-right: 35px !important;
+
     white-space: nowrap !important;
   }
+}
+
+.table_body_row:last-child {
+  border-bottom-width: 0px !important;
 }
 
 .status,

@@ -1,6 +1,7 @@
 import { User } from "@/utils/users";
 import styles from "./users-section.module.scss";
-import { Filter, IcMoreVert } from "@/components/icons";
+import { TitleCard } from "./title-card";
+import { MoreOptionsCard } from "./more-options-card";
 
 type Props = {
   users: User[];
@@ -13,40 +14,22 @@ export const UsersSection = (props: Props) => {
         <thead>
           <tr className={styles.table_head_row}>
             <th>
-              <div className="">
-                <p className="">organization</p>
-                <Filter className={styles.filter_icon} />
-              </div>
+              <TitleCard title="organization" />
             </th>
             <th>
-              <div className="">
-                <p className="">Username</p>
-                <Filter className={styles.filter_icon} />
-              </div>
+              <TitleCard title="Username" />
             </th>
             <th>
-              <div className="">
-                <p className="">Email</p>
-                <Filter className={styles.filter_icon} />
-              </div>
+              <TitleCard title="Email" />
             </th>
             <th>
-              <div className="">
-                <p className="">Phone number</p>
-                <Filter className={styles.filter_icon} />
-              </div>
+              <TitleCard title="Phone number" />
             </th>
             <th>
-              <div className="">
-                <p className="">Date joined</p>
-                <Filter className={styles.filter_icon} />
-              </div>
+              <TitleCard title="Date joined" />
             </th>
             <th>
-              <div className="">
-                <p className="">Status</p>
-                <Filter className={styles.filter_icon} />
-              </div>
+              <TitleCard title="Status" />
             </th>
 
             <th className={styles.th_more}></th>
@@ -68,7 +51,7 @@ export const UsersSection = (props: Props) => {
               </td>
 
               <td>
-                <IcMoreVert className={styles.more_icon} />
+                <MoreOptionsCard />
               </td>
             </tr>
           ))}

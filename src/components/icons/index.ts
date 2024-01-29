@@ -1,7 +1,7 @@
 export { default as BadgePercent } from "./BadgePercent";
 export { default as Bank } from "./Bank";
 export { default as Briefcase } from "./Briefcase";
-export { default as Calendar } from "./Calendar";
+export { default as CalendarIcon } from "./Calendar";
 export { default as ChartBar } from "./ChartBar";
 export { default as ClipboardList } from "./ClipboardList";
 export { default as CoinsSolid } from "./CoinsSolid";
@@ -33,3 +33,4 @@ export { default as LoanOrangeIcon } from "./LoanOrange";
 export { default as MoneyFuchsiaIcon } from "./MoneyFuchsia";
 export { default as UserPurpleIcon } from "./UserPurple";
 export { default as UsersPinkIcon } from "./UsersPink";
+export { default as Checkmark } from "./Checkmark";

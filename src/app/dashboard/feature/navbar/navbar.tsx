@@ -6,7 +6,7 @@ import Image from "next/image";
 import { DropdownIcon, Notification, Search } from "@/components/icons";
 import { FormEvent } from "react";
 import { Hamburger } from "@/components/hamburger";
-import { useSidebarStore } from "../store/sidebar-store";
+import { useSidebarStore } from "../../store/sidebar-store";
 
 export const Navbar = () => {
   const { setIsOpen, isOpen } = useSidebarStore();

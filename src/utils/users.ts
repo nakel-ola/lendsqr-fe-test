@@ -1,6 +1,6 @@
 export type User = {
   id: number;
-  organization: string;
+  organization: "lendsqr" | "irorun" | "quinu" | "dabshots" | "pixope";
   username: string;
   email: string;
   phone_number: string;
