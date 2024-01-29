@@ -1,13 +1,20 @@
-import { DetailsCard, UserInfo } from "./feature";
+import { DetailsCard, TitleCard, UserInfo } from "./feature";
 import styles from "./page.module.scss";
 
 import { Fragment } from "react";
+import { getUser } from "@/actions/get-user";
 
-type Props = {};
-export default function Details(props: Props) {
+type Props = {
+  params: {
+    id: string;
+  };
+};
+export default async function Details({ params: { id } }: Props) {
+  const data = await getUser({ id });
   return (
     <Fragment>
-      <UserInfo />
+      <TitleCard />
+      <UserInfo name={data.name} />
 
       <section className={styles.card}>
         <DetailsCard
@@ -15,15 +22,15 @@ export default function Details(props: Props) {
           items={[
             {
               name: "full Name",
-              value: "Grace Effiom",
+              value: data.name,
             },
             {
               name: "Phone Number",
-              value: "07060780922",
+              value: data.phone_number,
             },
             {
               name: "Email Address",
-              value: "grace@gmail.com",
+              value: data.email,
             },
             {
               name: "Bvn",
@@ -31,7 +38,7 @@ export default function Details(props: Props) {
             },
             {
               name: "Marital status",
-              value: "Single",
+              value: data.marital_status,
             },
             {
               name: "Children",
@@ -66,7 +73,7 @@ export default function Details(props: Props) {
             },
             {
               name: "office email",
-              value: "grace@lendsqr.com",
+              value: data.email,
             },
             {
               name: "Monthly income",

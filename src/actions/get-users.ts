@@ -45,7 +45,7 @@ export async function getUsers(args: Args): Promise<ReturnType> {
       method: "GET",
     });
 
-    return res.json();
+    return await res.json();
   } catch (error: any) {
     console.log(error);
     throw new Error(error.message);

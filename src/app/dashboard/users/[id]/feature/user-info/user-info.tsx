@@ -4,7 +4,10 @@ import { Star, User } from "@/components/icons";
 import styles from "./user-info.module.scss";
 import { useState } from "react";
 
-export const UserInfo = () => {
+type Props = {
+  name: string;
+};
+export const UserInfo = ({ name }: Props) => {
   const [active, setActive] = useState(0);
   return (
     <section className={styles.container}>
@@ -14,7 +17,7 @@ export const UserInfo = () => {
             <User />
           </div>
           <div className={styles.user_name}>
-            <p className={styles.name}>Grace Effiom</p>
+            <p className={styles.name}>{name}</p>
 
             <p className={styles.uid}>LSQFf587g90</p>
           </div>

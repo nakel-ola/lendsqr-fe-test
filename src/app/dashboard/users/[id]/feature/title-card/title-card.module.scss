@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  p {
+    color: #213f7d;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_red,
+.btn_primary {
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  background-color: transparent;
+}
+
+.btn_red {
+  border-color: #e4033b;
+  color: #e4033b;
+}
+.btn_primary {
+  border-color: #39cdcc;
+  color: #39cdcc;
+}
