@@ -1,0 +1,143 @@
+.container {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  background: #fff;
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  padding: 30px 30px 0px 30px;
+}
+
+.top {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+
+  .hr {
+    width: 1px;
+    height: 80px;
+    border: 0px;
+    outline: 0px;
+    background: rgba(84, 95, 125, 0.2);
+    margin: 0 30px;
+    display: none;
+    flex-shrink: 0px;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background: rgba(33, 63, 125, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  svg {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+}
+
+.user_name {
+  margin-left: 20px;
+  .name {
+    color: #213f7d;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .uid {
+    color: #545f7d;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.user_tier {
+  margin-top: 30px;
+  p {
+    color: #545f7d;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+}
+
+.user_amount {
+  margin-top: 30px;
+  .amount {
+    color: #213f7d;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .account {
+    color: #213f7d;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 41px;
+  overflow-x: scroll;
+}
+
+.tabs::-webkit-scrollbar {
+  height: 0px;
+}
+
+.tab,
+.tab_active {
+  min-width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.2s all ease;
+
+  p {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.tab_active {
+  border-bottom: 2px solid #39cdcc;
+
+  p {
+    color: #39cdcc;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  // Tablet
+}
+
+@media only screen and (min-width: 1024px) {
+  // Desktop
+  .top {
+    flex-direction: row;
+    align-items: center;
+    .hr {
+      display: block;
+    }
+  }
+
+  .user_tier, .user_amount {
+    margin-top: 0px;
+  }
+}

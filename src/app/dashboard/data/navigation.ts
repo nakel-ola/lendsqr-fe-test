@@ -40,7 +40,7 @@ export const navigation = [
       {
         name: "Users",
         Icon: UserFriends,
-        href: `${basePath}/#`,
+        href: `${basePath}`,
       },
       {
         name: "Guarantors",
