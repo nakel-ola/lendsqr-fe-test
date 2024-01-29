@@ -51,7 +51,7 @@ export const UsersSection = (props: Props) => {
               </td>
 
               <td>
-                <MoreOptionsCard />
+                <MoreOptionsCard id={user.id.toString()} />
               </td>
             </tr>
           ))}

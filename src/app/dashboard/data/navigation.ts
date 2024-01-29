@@ -30,7 +30,7 @@ export const navigation = [
       {
         name: "Dashboard",
         Icon: Home,
-        href: `${basePath}`,
+        href: `${basePath}/#`,
       },
     ],
   },
