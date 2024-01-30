@@ -34,3 +34,4 @@ export { default as MoneyFuchsiaIcon } from "./MoneyFuchsia";
 export { default as UserPurpleIcon } from "./UserPurple";
 export { default as UsersPinkIcon } from "./UsersPink";
 export { default as Checkmark } from "./Checkmark";
+export { default as ArrowBack } from "./ArrowBack";

@@ -1,4 +1,4 @@
-import { DetailsCard, TitleCard, UserInfo } from "./feature";
+import { BackButton, DetailsCard, TitleCard, UserInfo } from "./feature";
 import styles from "./page.module.scss";
 
 import { Fragment } from "react";
@@ -13,6 +13,7 @@ export default async function Details({ params: { id } }: Props) {
   const data = await getUser({ id });
   return (
     <Fragment>
+      <BackButton />
       <TitleCard />
       <UserInfo name={data.name} />
 
