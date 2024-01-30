@@ -1,16 +1,16 @@
 .container {
   padding: 12px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid rgba(84, 95, 125, 0.14);
   background: #fff;
   box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
 }
 
 .months {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 100px;
 }
 
 .caption {

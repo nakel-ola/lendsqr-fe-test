@@ -49,11 +49,14 @@
 
   button {
     width: 56px;
-    height: 40px;
+    height: 49px;
     flex-shrink: 0;
     background-color: #39cdcc;
     border: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

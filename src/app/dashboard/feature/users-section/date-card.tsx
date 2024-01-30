@@ -28,9 +28,9 @@ export const DateCard = (props: Props) => {
             selected={value}
             onSelect={onChange}
             initialFocus
-            classNames={{
-              root: "!border-[1px] !border-subtle-dark bg-white rounded-md",
-            }}
+            // classNames={{
+            //   root: "!border-[1px] !border-subtle-dark bg-white rounded-md",
+            // }}
           />
         </Popover.Content>
       </Popover.Root>

@@ -7,15 +7,23 @@ import styles from "./calendar.module.scss";
 // import "react-day-picker/dist/style.css";
 import "react-day-picker/dist/style.css";
 
-
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
 export const Calendar = (props: CalendarProps) => {
   const { className, classNames, showOutsideDays = true, ...rest } = props;
   return (
     <DayPicker
-      //   showOutsideDays={showOutsideDays}
+      showOutsideDays={showOutsideDays}
       className={`${styles.container} ${className}`}
+      // classNames={{
+      //   months: styles.months,
+      // }}
+      // styles={{
+      //   months: {
+      //     display: "block",
+      //     flexDirection: "column",
+      //   },
+      // }}
       components={{
         IconLeft: ({ ...props }) => (
           <ChevronDown className={styles.calender_previous} />

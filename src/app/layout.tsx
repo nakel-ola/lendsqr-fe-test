@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Work_Sans } from "next/font/google";
 import "./globals.scss";
+import "./styles/normalize.css";
+import "./styles/preflight.css";
 
 const avenir = localFont({
   variable: "--font-avenir",
