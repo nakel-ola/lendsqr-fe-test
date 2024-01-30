@@ -1,6 +1,7 @@
 import { removeDuplicates } from "@/utils/remove-duplicates";
 import { User, getUsersWithPagination } from "@/utils/users";
 import users from "@/data/users.json";
+import { isSameDay } from "date-fns";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -21,8 +22,7 @@ export async function GET(request: Request) {
       (!email || user.email.includes(email)) &&
       (!phone_number || user.phone_number.includes(phone_number)) &&
       (!status || user.status === status) &&
-      (!joined_at ||
-        new Date(user.joined_at).getTime() === new Date(joined_at).getTime())
+      (!joined_at || isSameDay(new Date(user.joined_at), new Date(joined_at)))
     );
   });
 

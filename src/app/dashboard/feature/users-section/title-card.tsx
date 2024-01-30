@@ -8,6 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { DropdownCard } from "./dropdown-card";
 import { InputCard } from "./input-card";
 import { DateCard } from "./date-card";
+import { format } from "date-fns/format";
 
 type Props = {
   title: string;
@@ -42,13 +43,16 @@ export const TitleCard = (props: Props) => {
 
   const applyFilter = () => {
     const params = new URLSearchParams(searchParams);
-    const { email, organization, phoneNumber, status, username } = data;
+    const { email, organization, phoneNumber, status, username, joined_at } =
+      data;
 
     if (email) params.set("email", email.toString());
     if (organization) params.set("organization", organization.toString());
     if (phoneNumber) params.set("phoneNumber", phoneNumber.toString());
     if (status) params.set("status", status.toString());
     if (username) params.set("username", username.toString());
+    if (joined_at)
+      params.set("joined_at", format(joined_at, "MM/dd/yyyy").toString());
 
     router.push(`/dashboard?` + params.toString());
   };

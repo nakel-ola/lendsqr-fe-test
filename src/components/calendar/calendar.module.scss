@@ -7,10 +7,10 @@
   box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
 }
 
-.months {
+.month {
   display: flex !important;
   flex-direction: column !important;
-  margin-top: 100px;
+  justify-content: space-between;
 }
 
 .caption {
@@ -119,13 +119,12 @@
   color: white;
 }
 
-.day_hidden {
-  visibility: hidden;
+.day_selected:hover {
+  background-color: #39cdcc;
+  color: white;
 }
 
-.day_disabled {
-  opacity: 0.5;
-}
+
 
 .calender_previous {
   rotate: 90deg;
