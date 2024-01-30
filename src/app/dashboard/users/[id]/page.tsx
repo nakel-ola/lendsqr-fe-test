@@ -154,3 +154,4 @@ export default async function Details({ params: { id } }: Props) {
     </Fragment>
   );
 }
+export const revalidate = 0;
