@@ -2,6 +2,7 @@ import { User } from "@/utils/users";
 import styles from "./users-section.module.scss";
 import { TitleCard } from "./title-card";
 import { MoreOptionsCard } from "./more-options-card";
+import { format } from "date-fns";
 
 type Props = {
   users: User[];
@@ -43,7 +44,7 @@ export const UsersSection = (props: Props) => {
               <td>{user.username}</td>
               <td>{user.email}</td>
               <td>{user.phone_number}</td>
-              <td>{user.joined_at}</td>
+              <td>{format(new Date(user.joined_at), "MMM dd, yyyy p")}</td>
               <td>
                 <div className={styles[`status-${user.status}`]}>
                   <p className="">{user.status}</p>
