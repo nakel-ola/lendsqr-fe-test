@@ -3,6 +3,7 @@ import styles from "./users-section.module.scss";
 import { TitleCard } from "./title-card";
 import { MoreOptionsCard } from "./more-options-card";
 import { format } from "date-fns";
+import Image from "next/image";
 
 type Props = {
   users: User[];
@@ -58,6 +59,20 @@ export const UsersSection = (props: Props) => {
           ))}
         </tbody>
       </table>
+
+      {users.length === 0 ? (
+        <div className={styles.empty}>
+          <Image
+            src="/empty.svg"
+            alt=""
+            width={200}
+            height={200}
+            className={styles.empty_image}
+          />
+
+          <p className="">No data</p>
+        </div>
+      ) : null}
     </div>
   );
 };
